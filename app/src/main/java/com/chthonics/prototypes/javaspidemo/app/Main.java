@@ -4,7 +4,13 @@
  */
 package com.chthonics.prototypes.javaspidemo.app;
 
+import com.chthonics.prototypes.javaspidemo.InputPullAdapterLoader;
+
 /**
+ * Designed to replicate how the AIXM Ingestion Service can fetch both fault and
+ * AxL Input Pull Adapters with compile time access to the Input Adapter API and
+ * runtime access to the Axl Input Adapter (note the dependency scopes in the
+ * pom file).
  *
  * @author Warwick Dufour
  */
@@ -14,7 +20,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        // Make sure we can fetch all service providers
+        InputPullAdapterLoader.providers().forEach((provider) -> {
+            System.out.println("Loaded: " + provider.getClass().getName());
+        });
     }
-    
+
 }
