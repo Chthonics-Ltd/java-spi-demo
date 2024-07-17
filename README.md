@@ -1,6 +1,6 @@
 # java-spi-demo
 ## Overview
-**java-spi-demo** is intended to show developers a pattern to use when implementing their own input Adapter as used in the AIXM Ingestion Service.
+**java-spi-demo** is intended as a proof of concept and to show developers a pattern to use when implementing their own input Adapter to be used in the AIXM Ingestion Service.
 The three top-level folders: api, axl and app show how the Java SPI pattern is used to provide pluggable input adapters to the Ingestion Service.
 Using an iNM Digitial Product (DP) that needs to connect to and fetch AIXM data from ADM as an example, the following steps should be followed to implement the pluggable adapter:
 1. Create a git project to hold the code that produces the Adapter implementation library as a jar file.
